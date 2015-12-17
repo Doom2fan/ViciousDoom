@@ -1,5 +1,5 @@
 // Credits:
-// Decorate: WildWeasel, Alex_Mercer
+// Decorate: WildWeasel, Chronos "phantombeta" Ouroboros
 // Sprites: ???
 // Weapons: A_FireCustomMissile (tracerName, fRandom [weaponSpread] (-, horizontalSpread), 1, horizontalOffset, verticalOffset, 0, fRandom [weaponSpread] (-, verticalSpread))
 // Monsters: A_CustomMissile (tracerName, verticalOffset, horizontalOffset, fRandom [monsterSpread] (-, horizontalSpread), 0, fRandom [monsterSpread] (-, verticalSpread))

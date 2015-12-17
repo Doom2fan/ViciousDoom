@@ -1,4 +1,4 @@
-// By Alex_Mercer
+// By Chronos "phantombeta" Ouroboros
 actor VD_IsUnderwater : boolean { }
 actor VD_Dying : boolean { }
 
