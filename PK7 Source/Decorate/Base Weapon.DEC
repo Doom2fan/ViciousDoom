@@ -1,0 +1,74 @@
+actor VD_BaseWeapon : weapon {
+    weapon.BobRangeX 0.3
+	weapon.BobRangeY 0.5
+	weapon.BobStyle InverseSmooth
+	weapon.BobSpeed 2.0
+    inventory.PickupSound "misc/gunpickup"
+    weapon.Kickback 100
+    +weapon.Ammo_Optional +weapon.NoAutoFire +inventory.Undroppable
+    +weapon.NoAlert
+    states {
+    QuickMelee:
+        TNT1 A 0 A_TakeInventory ("VD_DoMelee", 1)
+        TNT1 A 1 acs_namedExecuteAlways ("VD_QuickMelee")
+        TNT1 A 1 A_WeaponReady (WRF_NoBob | WRF_NoFire)
+        wait
+    DryFire:
+        TNT1 A 0 A_PlaySound ("Weapons/DryFire", CHAN_Weapon)
+        TNT1 A 0 A_Jump (256, "Reload")
+        wait
+        
+    Ready:
+        TNT1 A 1 A_WeaponReady
+        loop
+    Fire:
+        TNT1 A 1
+        goto Ready
+    
+    Select:
+        TNT1 A 0 A_Jump (256, "TrueSelect")
+        wait
+    TrueSelect:
+        TNT1 A 0 A_Raise
+        wait
+    Deselect:
+        TNT1 A 0 A_JumpIfHealthLower (1, "Deselect.DEAD")
+        TNT1 A 0 A_Jump (256, "TrueDeselect")
+        wait
+    TrueDeselect:
+        TNT1 A 0 A_Lower
+        wait
+    Deselect.DEAD:
+        TNT1 A 1 A_Lower
+        wait
+    }
+}
+
+// By Jekyll Grim Payne/zer0, edited by Alex_Mercer
+actor VD_MeleePuff {
+    +noBlockmap +noGravity +puffOnActors -allowParticles
+    +noExtremeDeath
+    damageType Kick
+    attackSound "Weapons/Kick/HitWall"
+    activeSound "Weapons/Kick/Swing"
+}
+
+actor VD_MeleePuffStrong : VD_MeleePuff {
+    decal FistScorch
+    attackSound "Weapons/Kick/Strong"
+    activeSound "Weapons/Kick/Swing"
+    -noExtremeDeath +extremeDeath
+    states {
+    Spawn:
+        TNT1 A 0 noDelay A_SpawnItem ("VD_ShotSmoke")
+        stop
+    }
+}
+
+// SynthFire stuff
+// Synth-Fire|By Xaser
+actor VD_SynthFireActive         : boolean { }
+actor VD_SynthFireLeft           : boolean { }
+actor VD_SynthFireRight          : boolean { }
+actor VD_SynthFireRightReloading : boolean { }
+actor VD_SynthFireLeftReloading  : boolean { }

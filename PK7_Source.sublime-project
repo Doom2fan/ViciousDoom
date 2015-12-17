@@ -1,0 +1,37 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"DBIGFONT.lmp",
+				"PLAYPAL.pal",
+				"*.png",
+				"*.jpg",
+				"*.bmp",
+				"*.gif",
+				"*.ogg",
+				"*.wav",
+				"*.mp3",
+				"thumbs.db"
+			],
+			"folder_exclude_patterns":
+			[
+				"acs",
+				"graphics",
+				"hires",
+				"models",
+				"music",
+				"sounds",
+				"sprites"
+			],
+			"path": "PK7 Source"
+		}
+	],
+	"settings":
+	{
+		"default_line_ending": "windows",
+		"tab_size": 4,
+		"translate_tabs_to_spaces": true
+	}
+}

@@ -1,0 +1,2 @@
+startupTitle = "Vicious Doom"
+startupColors = "FFFFFF", "A00000"

@@ -1,0 +1,6 @@
+@ECHO OFF
+SETLOCAL
+
+SET PROG_ZDOOM="%ZDOOM64DIR%\zdoom.EXE"
+
+%PROG_ZDOOM% -stdout -file "%CD%/PK7 Source" %*
