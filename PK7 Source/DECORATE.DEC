@@ -13,12 +13,6 @@
 ** ple actors should be in Credits/Sprites.TXT.
 */
 
-/* Highest DoomEdNums:
-** Weapons: 30003
-** Ammo: 31004
-** Inventory: 32003
-*/
-
 /* Some random units:
 ** 32 XY mapunits = 1 meter
 ** 38.4 Z mapunits = 1 meter

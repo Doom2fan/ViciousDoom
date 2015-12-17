@@ -147,67 +147,6 @@ actor VD_9mmCasing : VD_CasingBase {
 
 //-------------------------------------------------------------------------------------------
 //
-// Revolver Casing
-//
-//-------------------------------------------------------------------------------------------
-actor VD_RevolverCasingSpawn : VD_CasingSpawnerBase {
-    bounceFactor 1.0
-    states {
-    Spawn:
-        TNT1 A 0
-        TNT1 A 0 A_CustomMissile ("VD_RevolverCasing", -5, 0, 0, 2, -90)
-        stop
-    }
-}
-
-actor VD_RevolverCasing : VD_CasingBase {
-    scale .2
-    seeSound "Weapons/casing"
-    states {
-    Spawn:
-        TNT1 A 0
-        CAS2 ABCDEFGH 2 A_SpawnItem ("VD_ShotSmokeTrail")
-        loop
-    Death:
-        TNT1 A 0 A_Jump (256, "Rest1", "Rest2", "Rest3", "Rest4", "Rest5", "Rest6", "Rest7", "Rest8")
-        goto Rest1
-    Rest1:
-        CAS2 A 0
-        "----" A 0 A_Jump (256, "Delaying")
-        wait
-    Rest2:
-        CAS2 B 0
-        "----" A 0 A_Jump (256, "Delaying")
-        wait
-    Rest3:
-        CAS2 C 0
-        "----" A 0 A_Jump (256, "Delaying")
-        wait
-    Rest4:
-        CAS2 D 0
-        "----" A 0 A_Jump (256, "Delaying")
-        wait
-    Rest5:
-        CAS2 E 0
-        "----" A 0 A_Jump (256, "Delaying")
-        wait
-    Rest6:
-        CAS2 F 0
-        "----" A 0 A_Jump (256, "Delaying")
-        wait
-    Rest7:
-        CAS2 G 0
-        "----" A 0 A_Jump (256, "Delaying")
-        wait
-    Rest8:
-        CAS2 H 0
-        "----" A 0 A_Jump (256, "Delaying")
-        wait
-    }
-}
-
-//-------------------------------------------------------------------------------------------
-//
 // Rifle Casing
 //
 //-------------------------------------------------------------------------------------------
