@@ -55,8 +55,8 @@
 
 // Pick Ups
     // Ammo
-        9MM                                = "9mm";
-        PICKUP_9MM                         = "Picked up a 9mm mag";
+        9MM                         = "9mm";
+        PICKUP_9MM                  = "Picked up a 9mm mag";
 
 // Weapon Pickups
 
@@ -69,11 +69,6 @@
     OB_VOODOO                       = "%o killed his doppelganger without considering the consequences.";
 
 // PvP
-    // Primary
-    
-    // Secondary
-    
-    // Melee
     
     // Misc
         OB_SHRAPNEL                 = "%o was hit by a piece of shrapnel";
