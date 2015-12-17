@@ -16,11 +16,8 @@ acs.err
 (1)Log.txt
 *.o
 *.PK3
+*.PK7
 /C_Source/obj/
-/PK3_Source_GZDoom/acs
-/PK3_Source_Zandronum/acs
-*... Play - Dis.bat
+/PK7_Source/acs
 *.7z
-*... Play - ZDoom ReShade.bat
-*... Play - GZDoom QEffectsGL.bat
 *.sublime-workspace
