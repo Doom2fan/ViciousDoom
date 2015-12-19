@@ -30,9 +30,11 @@ actor VD_Player : playerPawn {
     player.AttackZOffset 20
     player.InvulnerabilityMode Reflective
     player.ColorRange 112, 127
-    +solid +noSkin
+    +solid +noSkin // +ghost
     
     var int user_Step;
+    var int user_SpreadY;
+    var int user_SpreadX;
     
     states {
     Spawn:

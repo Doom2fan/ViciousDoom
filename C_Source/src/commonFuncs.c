@@ -1,5 +1,5 @@
 /*
-**  Se7evidas - A GZDoom mod
+**  Vicious Doom - A GZDoom mod
 **  Copyright (C) 2015  Chronos Ouroboros
 **
 **  This program is free software; you can redistribute it and/or modify
@@ -123,3 +123,13 @@ int ScaleValue (int x, int fromMin, int fromMax, int toMin, int toMax) {
 accum ScaleValueAccum (accum x, accum fromMin, accum fromMax, accum toMin, accum toMax) {
     return (x - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin;
 }
+
+/*void ResizeV3D (accum len, vec3d vec*) {
+    accum nowlen = LengthV3D (vec);
+    *vec.x = *vec.x * (len /= nowlen);
+    *vec.y = *vec.y * len;
+    *vec.z = *vec.z * len;
+}
+accum LengthV3D (vec3d vec*) {
+    return sqrt (*vec.x * *vec.x + *vec.y * *vec.y + *vec.z * *vec.z);
+}*/

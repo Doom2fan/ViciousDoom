@@ -9,6 +9,13 @@
 
 #include "defs.h"
 
+static double const pi = 3.14159265359;
+static double const pi2 = pi / 2.0;
+static double const tau = pi * 2.0;
+static accum const piA = 3.14159265359k;
+static accum const pi2A = piA / 2.0k;
+static accum const tauA = piA * 2.0k;
+
 #define TIME_SEC  35
 #define TIME_MIN  35 * 60
 #define TIME_HOUR TIME_MIN * 60
@@ -16,6 +23,8 @@
 
 #define SinA ACS_Sin
 #define CosA ACS_Cos
+#define AtanA(x) (VectorAngle(1.0k, x))
+#define Atan2A(y, x) (VectorAngle(y, x))
 
 accum AbsA (accum x);
 accum Absine (accum speed, int amplitude);

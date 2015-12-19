@@ -1,5 +1,5 @@
 /*
-**  Se7evidas - A GZDoom mod
+**  Vicious Doom - A GZDoom mod
 **  Copyright (C) 2015  Chronos Ouroboros
 **
 **  This program is free software; you can redistribute it and/or modify
@@ -34,5 +34,21 @@ int Clamp (int x, int min, int max);
 accum ClampAccum (accum x, accum min, accum max);
 int ScaleValue (int x, int fromMin, int fromMax, int toMin, int toMax);
 accum ScaleValueAccum (accum x, accum fromMin, accum fromMax, accum toMin, accum toMax);
+
+/*accum ResizeV3D (accum len, vec3d vec*);
+accum LengthV3D (vec3d vec*);*/
+
+struct vec2d {
+    accum x;
+    accum y;
+};
+typedef struct vec2d vec2d;
+
+struct vec3d {
+    accum x;
+    accum y;
+    accum z;
+};
+typedef struct vec3d vec3d;
 
 #endif

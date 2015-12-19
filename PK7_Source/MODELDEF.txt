@@ -17,3 +17,14 @@ model VD_BaseTracer {
 
    frameIndex SPRK A 0 0
 }
+
+/*model VD_BaseTracerPlayer {
+   path "Models/Tracer/"
+   model 0 "tracer.md3"
+   skin 0 "tracer1.tga"
+   scale 1.0 1.0 1.0
+
+   pitchFromMomentum
+
+   frameIndex SPRK A 0 0
+}*/

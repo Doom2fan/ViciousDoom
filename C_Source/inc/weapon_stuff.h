@@ -1,5 +1,5 @@
 /*
-**  Se7evidas - A GZDoom mod
+**  Vicious Doom - A GZDoom mod
 **  Copyright (C) 2015  Chronos Ouroboros
 **
 **  This program is free software; you can redistribute it and/or modify

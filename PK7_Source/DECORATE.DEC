@@ -40,3 +40,4 @@
 
 // Weapons
 #INCLUDE "Decorate/Base Weapon.DEC"
+#INCLUDE "Decorate/Weapons/Pistol/DECORATE.DEC"

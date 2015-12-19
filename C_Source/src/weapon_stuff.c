@@ -1,5 +1,5 @@
 /*
-**  Se7evidas - A GZDoom mod
+**  Vicious Doom - A GZDoom mod
 **  Copyright (C) 2015  Chronos Ouroboros
 **
 **  This program is free software; you can redistribute it and/or modify
@@ -21,18 +21,11 @@
 #include "weapon_stuff.h"
 
 string WeaponName [] = {
-    s"S7_AMG",
-    s"S7_PrettyShootyIonCannonGun",
-    s"S7_Shotgun",
-    s"S7_Raptor",
-    s"S7_Revolver",
-    s"S7_TEC9"
+    s""
 };
 
 string DummyWeapons [] = {
-    s"S7_NullWeapon",
-    s"S7_SprintWeapon",
-    s"S7_QuickMelee"
+    s""
 };
 
 int GlobalVar LastWeapon [MAX_PLAYERS];
@@ -78,49 +71,84 @@ void DisableWeapon (string meh, string blah) {
 
 // Scripts
 // SynthFire stuff
-Script_C void S7_SynthFire () {
+Script_C void VD_SynthFire () {
     while (TRUE) {
-        if (!CheckInventory (s"S7_SynthFireActive"))
+        if (!CheckInventory (s"VD_SynthFireActive"))
             return;
         
-        if (KeyDown (BT_ATTACK) && !CheckInventory (s"S7_SynthFireLeft"))
-            GiveInventory (s"S7_SynthFireLeft", 1);
+        if (KeyDown (BT_ATTACK) && !CheckInventory (s"VD_SynthFireLeft"))
+            GiveInventory (s"VD_SynthFireLeft", 1);
         
-        if (KeyDown (BT_ALTATTACK) && !CheckInventory (s"S7_SynthFireRight"))
-            GiveInventory (s"S7_SynthFireRight", 1);
+        if (KeyDown (BT_ALTATTACK) && !CheckInventory (s"VD_SynthFireRight"))
+            GiveInventory (s"VD_SynthFireRight", 1);
         
         Delay (1);
         
-        if (KeyUp (BT_ATTACK) && CheckInventory (s"S7_SynthFireLeft"))
-            TakeInventory (s"S7_SynthFireLeft", 1);
+        if (KeyUp (BT_ATTACK) && CheckInventory (s"VD_SynthFireLeft"))
+            TakeInventory (s"VD_SynthFireLeft", 1);
         
-        if (KeyUp (BT_ALTATTACK) && CheckInventory (s"S7_SynthFireRight"))
-            TakeInventory (s"S7_SynthFireRight", 1);
+        if (KeyUp (BT_ALTATTACK) && CheckInventory (s"VD_SynthFireRight"))
+            TakeInventory (s"VD_SynthFireRight", 1);
     }
 }
 
-Script_C int S7_SynthFireAllowChange () {
-    if (!CheckInventory (s"S7_SynthFireRightReloading") || CheckInventory (s"S7_SynthFireLeftReloading"))
+Script_C int VD_SynthFireAllowChange () {
+    if (!CheckInventory (s"VD_SynthFireRightReloading") || CheckInventory (s"VD_SynthFireLeftReloading"))
         return 1;
     else
         return 0;
 }
 
-Script_C void S7_QuickMelee () {
-    DisableWeapon (s"S7_QuickMelee", s"None");
-}
-
-Script_C int S7_GetAutoReloading () {
-    if (GetUserCVar (PLN, s"S7_AutoReloading") == false)
-        return 0;
-    else
-        return 1;
-}
-
-Script_C void S7_RecoilPitch (accum offset) { // Called like this in code: TNT1 A 0 namedExecuteAlways ("S7_RecoilPitch", 0, 0.5 * 65535)
+Script_C void VD_RecoilPitch (accum offset) { // Called like this in code: TNT1 A 0 ACS_NamedExecuteAlways ("VD_RecoilPitch", 0, 0.5 * 65535)
     accum oldPitch = GetActorPitch (0);
     accum scaledOffset = ScaleValueAccum (offset, -90.0k, 90.0k, -0.25k, 0.25k);
     accum newPitch = ClampAccum (oldPitch - scaledOffset, -0.25k, 0.25k);
     
     SetActorPitch (0, newPitch);
 }
+
+/*Script_C void VD_SpawnTracer () {
+    vec3d puff;
+    vec3d shooter;
+    vec3d diff;
+    accum angle;
+    accum pitch;
+    int vspeed = 0;
+    int tracerTID = UniqueTID ();
+    int shooterTempTID = UniqueTID ();
+    int shooterTID;
+
+    puff.x = GetActorX (0);
+    puff.y = GetActorY (0);
+    puff.z = GetActorZ (0);
+
+    if (!SetActivatorToTarget (0))
+        return;
+
+    shooter.x = GetActorX (0);
+    shooter.y = GetActorY (0);
+    shooter.z = GetActorZ (0);
+    shooterTID = ActivatorTID ();
+    Thing_ChangeTID (0, shooterTempTID);
+
+    diff.x = MaxA (puff.x, shooter.x) - MinA (puff.x, shooter.x);
+    diff.y = MaxA (puff.y, shooter.y) - MinA (puff.y, shooter.y);
+    diff.z = MaxA (puff.z, shooter.z) - MinA (puff.z, shooter.z);
+
+    angle = FixedSqrt (diff.x * diff.x + diff.y * diff.y);
+
+    Spawn (s"VD_BaseTracer", shooter.x, shooter.y, shooter.z, tracerTID, (int) (angle >> 2))
+
+    SetActivator (tracerTID);
+    SetPointer (AAPTR_TARGET, shooterTempTID);
+
+    vx = angle * FixedSqrt (diff.x * diff.x + diff.z * diff.z)
+    vy = FixedMul (finecosine[pitch>>ANGLETOFINESHIFT], finesine[an>>ANGLETOFINESHIFT]);
+    vz = -finesine[pitch>>ANGLETOFINESHIFT];
+    speed = MissileActor->Speed;
+
+    vec3d vec ()
+
+    ResizeV3D (GetActorProperty (0, APROP_Speed), )
+    //SpawnProjectile (0, s"VD_BaseTracer", (int) (angle >> 2), 0, vspeed, 0, 0);
+}*/
