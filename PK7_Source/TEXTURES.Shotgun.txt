@@ -1,0 +1,27 @@
+sprite SHTSA0, 320, 200 {
+	patch SHTGA0, 130, 101
+}
+
+sprite SHTSB0, 320, 200 {
+	patch SHTGA0, 156, 117
+}
+
+sprite SHTSC0, 320, 200 {
+	patch SHTGA0, 182, 135
+}
+
+sprite SHTGB0, 320, 200 {
+	patch SHTGA0, 116, 97
+}
+
+sprite SHTGB0, 320, 200 {
+    patch SHTGA0, 116, 97
+}
+
+sprite SHTGC0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame1.png", 116, 95
+}
+
+sprite SHTGD0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame2.png", 115, 93
+}

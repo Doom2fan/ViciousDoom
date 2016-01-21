@@ -21,7 +21,8 @@ actor VD_Player : playerPawn {
     player.DisplayName "Marine"
     
     // Weapon Slots
-    player.WeaponSlot 1, VD_Pistol
+    player.WeaponSlot 2, VD_Pistol
+    player.WeaponSlot 3, VD_Shotgun
     
     // Misc
     radius 16
@@ -33,8 +34,6 @@ actor VD_Player : playerPawn {
     +solid +noSkin // +ghost
     
     var int user_Step;
-    var int user_SpreadY;
-    var int user_SpreadX;
     
     states {
     Spawn:

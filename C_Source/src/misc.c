@@ -68,7 +68,7 @@ Script_C void VD_Keys ENTER () {
     }
 }
 
-Script_C void VD_SetProjectilePitch () {
+/*Script_C void VD_SetProjectilePitch () {
     accum x = GetActorVelX (0); accum y = GetActorVelY (0); accum z = GetActorVelZ (0);
     accum angle = GetActorAngle (0);
     accum pitch = 0;
@@ -92,7 +92,7 @@ Script_C void VD_SetProjectilePitch () {
 
 Script_C void AAAA () {
     Print ("%k", GetActorPitch (0));
-}
+}*/
 
 #ifdef DEBUG
 Script_C void VD_DebugVelocity () {

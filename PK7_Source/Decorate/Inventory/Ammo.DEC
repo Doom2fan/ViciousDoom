@@ -12,3 +12,18 @@ actor VD_9mmCartridges : ammo replaces Clip {
         stop
     }
 }
+
+actor VD_Shells : ammo replaces Shell {
+    tag "$SHELLS"
+    inventory.PickupMessage "$PICKUP_SHELLS"
+    inventory.Amount 4
+    inventory.MaxAmount 60
+    ammo.BackpackMaxAmount 120
+    inventory.Icon "SHELA0"
+    inventory.PickupSound "misc/ammopickup"
+    states {
+    Spawn:
+        SHEL A -1
+        stop
+    }
+}

@@ -20,13 +20,13 @@
 
 #INCLUDE "Decorate/Defaults.DEC"
 
-// Common stuff
-#INCLUDE "Decorate/Bullets.DEC"
-
 // Effects
 #INCLUDE "Decorate/Effects/Smoke.DEC"
 #INCLUDE "Decorate/Effects/Casings.DEC"
 #INCLUDE "Decorate/Effects/Blood.DEC"
+
+// Common stuff
+#INCLUDE "Decorate/Bullets.DEC"
 
 // Monsters
 
@@ -41,3 +41,4 @@
 // Weapons
 #INCLUDE "Decorate/Base Weapon.DEC"
 #INCLUDE "Decorate/Weapons/Pistol/DECORATE.DEC"
+#INCLUDE "Decorate/Weapons/Shotgun/DECORATE.DEC"
