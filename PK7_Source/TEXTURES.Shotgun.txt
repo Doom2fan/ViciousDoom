@@ -25,3 +25,100 @@ sprite SHTGC0, 320, 200 {
 sprite SHTGD0, 320, 200 {
     patch "graphics/Weapons/Shotgun/Frame2.png", 115, 93
 }
+
+sprite SHTRA0, 320, 200 {
+    patch SHTGA0, 89, 106
+}
+
+sprite SHTRB0, 320, 200 {
+    patch SHTGA0, 70, 116
+}
+
+sprite SHTRC0, 320, 200 {
+    patch SHTGA0, 53, 121
+}
+
+sprite SHTRD0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame3.png", 40, 63
+}
+
+sprite SHTRE0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame3.png", 30, 68
+}
+
+sprite SHTRF0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRG0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame4.png", 105, 166
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRH0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame4.png", 96, 157
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRI0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame4.png", 87, 153
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRJ0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame4.png", 81, 148
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRK0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame4.png", 77, 147
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRL0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame5.png", 84, 132
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRM0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame5.png", 92, 139
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRN0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame5.png", 99, 148
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRO0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame5.png", 109, 161
+    patch "graphics/Weapons/Shotgun/Frame3.png", 20, 71
+}
+
+sprite SHTRP0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame3.png", 16, 79
+}
+
+sprite SHTRQ0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame6.png", 41, 55
+}
+
+sprite SHTRR0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame6.png", 38, 60
+}
+
+sprite SHTRS0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame7.png", 43, 63
+}
+
+sprite SHTRT0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame7.png", 41, 67
+}
+
+sprite SHTRU0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame8.png", 42, 74
+}
+
+sprite SHTRV0, 320, 200 {
+    patch "graphics/Weapons/Shotgun/Frame8.png", 40, 78
+}

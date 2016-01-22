@@ -4,6 +4,7 @@ actor VD_ShotgunClip : ammo {
     +ignoreSkill
 }
 
+actor VD_Shotgun_Reloading : boolean { }
 actor VD_Shotgun : VD_BaseWeapon {
     weapon.AmmoUse 1
     weapon.AmmoType "VD_ShotgunClip"
@@ -17,9 +18,11 @@ actor VD_Shotgun : VD_BaseWeapon {
     Ready2:
         TNT1 A 0 A_JumpIfInventory ("VD_DoMelee", 1, "KickMelee")
         SHTG A 1 A_WeaponReady (WRF_AllowReload)
+        TNT1 A 0 A_TakeInventory ("VD_Shotgun_Reloading", 1)
         Loop
 
     Deselect:
+        TNT1 A 0 A_TakeInventory ("VD_Shotgun_Reloading", 1)
         SHTS ABC 1
         goto BaseDeselect
 
@@ -38,23 +41,39 @@ actor VD_Shotgun : VD_BaseWeapon {
         stop
 
     Reload:
+        TNT1 A 0 A_JumpIfInventory ("VD_Shotgun_Reloading", 1, "ReloadFinish")
         TNT1 A 0 A_JumpIfInventory ("VD_ShotgunClip", 0, "Ready2")
         TNT1 A 0 A_JumpIfInventory ("VD_Shells", 1, "TrueReloadStart")
         goto Ready2
+
     TrueReloadStart:
+        TNT1 A 0 A_GiveInventory ("VD_Shotgun_Reloading", 1)
+        SHTR ABCDE 1
+    TrueReload.FirstShell:
         TNT1 A 0 A_JumpIfInventory ("VD_ShotgunClip", 1, "TrueReload")
         TNT1 A 0 A_JumpIfInventory ("VD_Shells", 1, 1)
         goto ReloadFinish
+        SHTR FGHI 1
+        SHTR J 1 A_PlaySound ("Weapons/Shotgun/In", CHAN_Weapon)
         TNT1 A 0 A_GiveInventory ("VD_ShotgunClip", 1)
         TNT1 A 0 A_TakeInventory ("VD_Shells", 1)
+        SHTR KLMNO 1
+        SHTR FFFPQRSTUVVUTSRQPF 1
+        SHTR F 2 A_WeaponReady (WRF_AllowReload | WRF_NoFire | WRF_NoSwitch | WRF_NoBob)
     TrueReload:
         TNT1 A 0 A_JumpIfInventory ("VD_ShotgunClip", 0, "ReloadFinish")
         TNT1 A 0 A_JumpIfInventory ("VD_Shells", 1, 1)
         goto ReloadFinish
+        SHTR FGHI 1
+        SHTR J 1 A_PlaySound ("Weapons/Shotgun/In", CHAN_Weapon)
         TNT1 A 0 A_GiveInventory ("VD_ShotgunClip", 1)
         TNT1 A 0 A_TakeInventory ("VD_Shells", 1)
+        SHTR KLMNO 1
+        SHTR F 3 A_WeaponReady (WRF_AllowReload | WRF_NoFire | WRF_NoSwitch | WRF_NoBob)
         loop
     ReloadFinish:
+        TNT1 A 0 A_TakeInventory ("VD_Shotgun_Reloading", 1)
+        SHTR EDCBA 1
         goto Ready2
 
     Spawn:
