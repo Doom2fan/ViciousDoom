@@ -21,7 +21,7 @@ actor VD_BaseWeapon : weapon {
         goto Ready
 
     KickMelee:
-        TNT1 A 0 A_TakeInventory ("VD_DoMelee", 99999)
+        TNT1 A   0 A_TakeInventory ("VD_DoMelee", 99999)
         KICK BCD 1
     KickMelee.Mid:
         TNT1 A 0 A_JumpIfInventory ("PowerStrength", 1, "KickMelee.Berserk")
@@ -31,9 +31,9 @@ actor VD_BaseWeapon : weapon {
         TNT1 A 0 A_CustomPunch (3 * random [weaponDamage] (1, 5) * 13, 1, 0, "VD_MeleePuffStrong")
         goto KickMelee.End
     KickMelee.End:
-        KICK H 4
+        KICK H        4
         KICK IGFEDCBA 1
-        TNT1 A 0 A_Jump (256, "Ready2")
+        TNT1 A        0 A_Jump (256, "Ready2")
         wait
     
     Select:

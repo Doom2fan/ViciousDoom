@@ -42,3 +42,4 @@
 #INCLUDE "Decorate/Base Weapon.DEC"
 #INCLUDE "Decorate/Weapons/Pistol/DECORATE.DEC"
 #INCLUDE "Decorate/Weapons/Shotgun/DECORATE.DEC"
+#INCLUDE "Decorate/Weapons/Super Shotgun/DECORATE.DEC"
