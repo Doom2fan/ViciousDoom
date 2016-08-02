@@ -3,9 +3,9 @@
 // Pistol
 //
 //-------------------------------------------------------------------------------------------
-Weapons/Pistol/Fire            "sounds/Weapons/Pistol/Fire.ogg" // By kannoe from GAMEBANANA under the CC BY-NC-ND 4.0 license
-Weapons/Pistol/Out             "sounds/Weapons/Pistol/Out.ogg"  // By NightmareMutant from GAMEBANANA
-Weapons/Pistol/In              "sounds/Weapons/Pistol/In.ogg"   // Ditto
+Weapons/Pistol/Fire            "sounds/Weapons/Pistol/Fire.ogg" // By kannoe from GAMEBANANA under the CC BY-NC-ND 4.0 license.
+Weapons/Pistol/Out             "sounds/Weapons/Pistol/Out.ogg"  // By NightmareMutant from GAMEBANANA.
+Weapons/Pistol/In              "sounds/Weapons/Pistol/In.ogg"   // Ditto.
 
 //-------------------------------------------------------------------------------------------
 //
@@ -23,4 +23,7 @@ Weapons/Shotgun/Back            "sounds/Weapons/Shotgun/Back.ogg"    // Ditto.
 // Super Shotgun
 //
 //-------------------------------------------------------------------------------------------
-Weapons/SuperShotgun/Fire       "sounds/Weapons/SuperShotgun/Fire.ogg"
+Weapons/SuperShotgun/Fire       "sounds/Weapons/SuperShotgun/Fire.ogg"  // Made from a sound by NightmareMutant and the SSG firing sound from Doom 3: Resurrection of Evil.
+Weapons/SuperShotgun/Open       "sounds/Weapons/SuperShotgun/Open.ogg"  // By Id Software, Per Kristian.
+Weapons/SuperShotgun/Load       "sounds/Weapons/SuperShotgun/Load.ogg"  // Ditto.
+Weapons/SuperShotgun/Close      "sounds/Weapons/SuperShotgun/Close.ogg" // Ditto.
