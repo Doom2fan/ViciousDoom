@@ -1,0 +1,26 @@
+//-------------------------------------------------------------------------------------------
+//
+// Pistol
+//
+//-------------------------------------------------------------------------------------------
+Weapons/Pistol/Fire            "sounds/Weapons/Pistol/Fire.ogg" // By kannoe from GAMEBANANA under the CC BY-NC-ND 4.0 license
+Weapons/Pistol/Out             "sounds/Weapons/Pistol/Out.ogg"  // By NightmareMutant from GAMEBANANA
+Weapons/Pistol/In              "sounds/Weapons/Pistol/In.ogg"   // Ditto
+
+//-------------------------------------------------------------------------------------------
+//
+// Shotgun
+//
+//-------------------------------------------------------------------------------------------
+Weapons/Shotgun/Fire            "sounds/Weapons/Shotgun/Fire.ogg"    // Made by Chronos "phantombeta" Ouroboros from sounds from Half-Life, Counter-Strike and a sound by NightmareMutant. (Sound by NightmareMutant licensed under CC BY-NC-ND 4.0)
+Weapons/Shotgun/Pump            "sounds/Weapons/Shotgun/Pump.ogg"    // From Counter-Strike: Condition Zero.
+Weapons/Shotgun/In              "sounds/Weapons/Shotgun/In.ogg"      // Ditto.
+Weapons/Shotgun/Forward         "sounds/Weapons/Shotgun/Forward.ogg" // Ditto.
+Weapons/Shotgun/Back            "sounds/Weapons/Shotgun/Back.ogg"    // Ditto.
+
+//-------------------------------------------------------------------------------------------
+//
+// Super Shotgun
+//
+//-------------------------------------------------------------------------------------------
+Weapons/SuperShotgun/Fire       "sounds/Weapons/SuperShotgun/Fire.ogg"
