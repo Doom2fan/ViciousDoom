@@ -14,7 +14,8 @@ actor VD_Player : playerPawn {
     
     // Give Items/Weapons/Ammo
     player.StartItem VD_Pistol
-    player.StartItem VD_9mmCartridges, 65
+    player.StartItem VD_PistolClip, 15
+    player.StartItem VD_9mmCartridges, 50
     player.StartItem VD_MeleeKey
     
     // Class stuff
